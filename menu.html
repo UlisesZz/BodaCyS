@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú - Cristina y Sergio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html">Cristina & Sergio</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <a class="nav__link" href="index.html#top">Bienvenida</a>
+        <a class="nav__link" href="index.html#rsvp">Confirmación</a>
+        <a class="nav__link" href="index.html#gifts">Mesa de Regalos</a>
+        <a class="nav__link" href="menu.html">Menú</a>
+        <a class="nav__link" href="itinerario.html">Itinerario</a>
+        <a class="nav__link" href="album.html">Nuestro Álbum</a>
+        </div>  
+      </div>
+    <div class="nav__backdrop" id="navBackdrop" aria-hidden="true"></div>
+  </nav>
+
+  <main class="page">
+    <section class="page-card menu-card">
+      <!-- HOJITA + FLOR (no se quitan) -->
+      <div class="page-deco page-deco--left" aria-hidden="true"></div>
+      <div class="menu-deco-flower" aria-hidden="true"></div>
+
+      <h1 class="page-title menu-title">Menú</h1>
+      <div class="page-rule"></div>
+
+      <p class="page-subtitle menu-subtitle">Contaremos con un Menú Ligero de 3 tiempos....</p>
+
+      <!-- CONTENIDO ESTILO CAPTURA -->
+      <div class="menu-simple">
+        <div class="menu-simple__section">
+          <div class="menu-simple__heading">PRIMER TIEMPO</div>
+          <div class="menu-simple__item">Crema de elote con rajas de poblano</div>
+        </div>
+
+        <div class="menu-simple__sep" aria-hidden="true"></div>
+
+        <div class="menu-simple__section">
+          <div class="menu-simple__heading">SEGUNDO TIEMPO</div>
+          <div class="menu-simple__item">Fetuccini a la crema con tocino</div>
+        </div>
+
+        <div class="menu-simple__sep" aria-hidden="true"></div>
+
+        <div class="menu-simple__section menu-simple__section--main">
+          <div class="menu-simple__heading">PLATO FUERTE</div>
+          <div class="menu-simple__item">
+            Pollo relleno de jamón de pavo con queso Philadelphia en salsa de chipotle
+            acompañado de Suflé de papas: rebanadas de papas horneadas con jamón, queso, perejil y crema
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER (igual que tus otras páginas) -->
+      <div class="page-foot">
+        <div class="page-foot__rule"></div>
+        <div class="page-foot__row">
+          <!-- <div class="wa-ic" aria-hidden="true">🟢</div>
+          <div class="page-foot__text">
+            Si presentas alguna alergia o restricción alimentaria haznos saber a nuestro medio de contacto oficial<br>
+            <a class="page-foot__link" href="https://wa.me/525533583405" target="_blank" rel="noopener">Contacto: 5533583405</a>
+          </div> -->
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

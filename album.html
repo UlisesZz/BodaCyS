@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestro Álbum - Cristina y Sergio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html">Cristina & Sergio</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <a class="nav__link" href="index.html#top">Bienvenida</a>
+        <a class="nav__link" href="index.html#rsvp">Confirmación</a>
+        <a class="nav__link" href="index.html#gifts">Mesa de Regalos</a>
+        <a class="nav__link" href="menu.html">Menú</a>
+        <a class="nav__link" href="itinerario.html">Itinerario</a>
+        <a class="nav__link" href="album.html">Nuestro Álbum</a>
+      </div>
+    </div>
+    <div class="nav__backdrop" id="navBackdrop" aria-hidden="true"></div>
+  </nav>
+
+  <main class="page">
+    <section class="page-card page-card--album">
+
+      <span class="page-deco page-deco--left" aria-hidden="true"></span>
+      <span class="page-deco page-deco--right page-deco--album-bottom" aria-hidden="true"></span>
+
+      <h1 class="page-title">Nuestra Historia</h1>
+      <div class="page-rule"></div>
+
+      <!-- VIDEO -->
+      <div class="album-single">
+        <video class="album__player" controls playsinline preload="metadata">
+          <source src="assets/album.mp4" type="video/mp4">
+        </video>
+
+        <!-- Línea divisora -->
+        <div class="page-rule"></div>
+
+        <!-- TEXTO MÁS CLARO -->
+        <div class="page-subtitle page-subtitle--sm">
+          Ayúdanos con la música 💛 <br />
+          <strong>Playlist</strong>: canciones para poner durante la fiesta. <br />
+          <strong>Playlist “Mariachis”</strong>: canciones para que el mariachi toque.
+        </div>
+
+        <!-- 2 BOTONES -->
+        <div class="album-actions" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:14px;">
+          <button class="btn-spotify" id="openFiestaModal" type="button">
+            Playlist🎶
+          </button>
+
+          <button class="btn-spotify" id="openMariachisModal" type="button">
+            Playlist Mariachis 🎺
+          </button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- MODAL: FIESTA / DJ (BODA C&S) -->
+  <div class="modal" id="fiestaModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Playlist Fiesta / DJ">
+    <div class="modal__overlay" id="fiestaOverlay"></div>
+
+    <div class="modal__panel" role="document">
+      <button class="modal__close" id="closeFiestaModal" type="button" aria-label="Cerrar">✕</button>
+
+      <div class="modal__title">Playlist🎶</div>
+      <div class="page-subtitle page-subtitle--sm" style="margin: 10px 0 14px;">
+        Aquí van las canciones para poner durante la fiesta.
+        Si quieres, agrega tus canciones favoritas 🙌
+      </div>
+
+      <iframe
+        class="modal__iframe"
+        src="https://open.spotify.com"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+
+      <div class="modal__footer">
+        <a class="modal__btn" href="https://open.spotify.com" target="_blank" rel="noopener">
+          Abrir en Spotify 🎵
+        </a>
+        <button class="modal__btn modal__btn--ghost" id="closeFiestaModal2" type="button">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: MARIACHIS -->
+  <div class="modal" id="mariachisModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Playlist Mariachis">
+    <div class="modal__overlay" id="mariachisOverlay"></div>
+
+    <div class="modal__panel" role="document">
+      <button class="modal__close" id="closeMariachisModal" type="button" aria-label="Cerrar">✕</button>
+
+      <div class="modal__title">Playlist Mariachis 🎺</div>
+      <div class="page-subtitle page-subtitle--sm" style="margin: 10px 0 14px;">
+        Esta lista es para el momento del mariachi en vivo.
+        Agrega canciones que sí o sí quieres escuchar tocadas por mariachi 💛
+      </div>
+
+      <iframe
+        class="modal__iframe"
+        src="https://open.spotify.com"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+
+      <div class="modal__footer">
+        <a class="modal__btn" href="https://open.spotify.com" target="_blank" rel="noopener">
+          Abrir en Spotify 🎵
+        </a>
+        <button class="modal__btn modal__btn--ghost" id="closeMariachisModal2" type="button">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- JS mínimo para modales -->
+  <script>
+    (function () {
+      function openModal(modal){
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal(modal){
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      // Fiesta/DJ
+      const fiestaModal = document.getElementById('fiestaModal');
+      document.getElementById('openFiestaModal').addEventListener('click', () => openModal(fiestaModal));
+      document.getElementById('closeFiestaModal').addEventListener('click', () => closeModal(fiestaModal));
+      document.getElementById('closeFiestaModal2').addEventListener('click', () => closeModal(fiestaModal));
+      document.getElementById('fiestaOverlay').addEventListener('click', () => closeModal(fiestaModal));
+
+      // Mariachis
+      const mariachisModal = document.getElementById('mariachisModal');
+      document.getElementById('openMariachisModal').addEventListener('click', () => openModal(mariachisModal));
+      document.getElementById('closeMariachisModal').addEventListener('click', () => closeModal(mariachisModal));
+      document.getElementById('closeMariachisModal2').addEventListener('click', () => closeModal(mariachisModal));
+      document.getElementById('mariachisOverlay').addEventListener('click', () => closeModal(mariachisModal));
+
+      // ESC cierra el que esté abierto
+      document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape') return;
+        if (fiestaModal.classList.contains('is-open')) closeModal(fiestaModal);
+        if (mariachisModal.classList.contains('is-open')) closeModal(mariachisModal);
+      });
+    })();
+  </script>
+</body>
+</html>

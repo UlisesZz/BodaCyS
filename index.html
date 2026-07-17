@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¡Nuestra boda! Cristina y Sergio</title>
+
+  <!-- Fonts: script + serif + sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+
+
+
+
+<div
+  class="intro-envelope"
+  id="introEnvelope"
+  aria-hidden="true"
+  role="button"
+  tabindex="0"
+  aria-label="Abrir invitación"
+>
+  <div class="intro-envelope__paper">
+
+    <img
+      src="assets/fondoSobre.png"
+      class="intro-envelope__bg"
+      alt=""
+      aria-hidden="true"
+      onerror="this.onerror=null;this.src='fondoSobre.png';"
+    />
+
+    <div class="intro-envelope__content">
+      <div class="intro-envelope__names">
+        Cristina y Sergio
+      </div>
+
+      <div class="intro-envelope__seal-wrap">
+        <img
+          src="assets/carta.png"
+          class="intro-envelope__seal"
+          alt=""
+          aria-hidden="true"
+          onerror="this.onerror=null;this.src='carta.png';"
+        />
+      </div>
+
+      <div class="intro-envelope__exclusive">
+        Esta invitación es exclusiva<br>para ti
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- NAV (Hamburger) -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html">Cristina & Sergio</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <a class="nav__link" href="index.html#top">Bienvenida</a>
+        <a class="nav__link" href="index.html#rsvp">Confirmación</a>
+        <a class="nav__link" href="index.html#gifts">Mesa de Regalos</a>
+        <a class="nav__link" href="menu.html">Menú</a>
+        <a class="nav__link" href="itinerario.html">Itinerario</a>
+        <a class="nav__link" href="album.html">Nuestro Álbum</a>
+      </div>
+    </div>
+    <div class="nav__backdrop" id="navBackdrop" aria-hidden="true"></div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <img class="hero__img" src="assets/hero-1.jpeg" alt="Cristina y Sergio" style="--focus-y:45%; --focus-x:60%;" onerror="this.onerror=null;this.src='assets/hero-1.jpg';" />
+    <div class="hero__overlay"></div>
+
+    <div class="hero__text">
+      <div class="hero__kicker">¡NUESTRA BODA!</div>
+      <h1 class="hero__names">Cristina y<br>Sergio</h1>
+    </div>
+  </header>
+
+  <!-- STRIP INFO (texto EXACTO como en imagen) -->
+  <section class="strip">
+    <div class="strip__inner">
+      <div class="strip__col strip__left">
+        <div class="strip__small">20 DE JUNIO</div>
+      </div>
+
+      <div class="strip__col strip__center">
+        <div class="strip__small">
+          <a class="strip__cta" href="#rsvp">POR FAVOR CONFIRMA TU ASISTENCIA AQUÍ</a>
+        </div>
+        <!-- <div class="strip__tiny">ANTES DEL </div> -->
+      </div>
+
+      <div class="strip__col strip__right">
+        <div class="strip__small">
+          <a class="strip__loc" href="https://maps.app.goo.gl/bNNa2QAU9VbnJkMr5?g_st=iw" target="_blank" rel="noopener">
+            TEPOTZOTLÁN, EDOMEX
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="count" aria-label="Cuenta regresiva">
+    <div class="divider"></div>
+
+    <div class="count__inner">
+      <div class="count__icon" aria-hidden="true">
+        <img src="assets/Cuenta_atras.png" alt="" loading="lazy" />
+      </div>
+
+      <div class="count__title">FALTAN</div>
+
+      <div class="count__timer" id="countdown"></div>
+    </div>
+
+    <div class="divider"></div>
+  </section>
+
+  <!-- STORY (texto EXACTO como en imagen) -->
+  <section class="story">
+    <div class="story__grid">
+      <div class="story__left">
+        <div class="leaf leaf--left" aria-hidden="true"></div>
+
+        <h2 class="script-title">Nuestra Historia</h2>
+
+        <p class="story__text">
+          Nos conocimos hace más de diez años, cuando aún estábamos estudiando, y como si estuviéramos destinados a estar juntos, nos encontramos. De la amistad nació el cariño, luego nos hicimos novios y crecieron la confianza y la admiración mutua. Desde entonces hemos construido una vida juntos y hoy queremos celebrar nuestro amor, rodeados de quienes han sido parte de nuestra historia, diciendo “Sí para siempre”.
+        </p>
+      </div>
+
+      <div class="story__photos">
+        <figure class="photo">
+          <img src="assets/story-1.jpeg" alt="Foto historia 1" onerror="this.onerror=null;this.src='assets/story-1.jpg';" />
+        </figure>
+        <figure class="photo">
+          <img src="assets/story-2.jpeg" alt="Foto historia 2" onerror="this.onerror=null;this.src='assets/story-2.jpg';" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section class="details">
+    
+
+    <div class="divider"></div>
+
+    <div class="details__inner">
+
+      <div class="details__block">
+        <div class="details__icon" aria-hidden="true">
+          <img src="assets/Dibujo_Ceremonia_Bienvenida.png" alt="" />
+        </div>
+        <h3 class="details__title script">Ceremonia Religiosa</h3>
+        <p class="details__line"><strong>Parroquia San Pedro Apóstol</strong></p>
+        <p class="details__line">·Hora de inicio: 3:30 PM</p>
+        <p class="details__line">
+          <a class="details__addressLink"
+            href="https://www.google.com/maps/search/?api=1&query=Parroquia%20de%20San%20Pedro%20Ap%C3%B3stol%20de%20Tepotzotl%C3%A1n%2C%20Plaza%20Virreinal%20No.%20100%2C%20Col.%20Barrio%20San%20Mart%C3%ADn%2C%20C.P.%2054600%2C%20Tepotzotl%C3%A1n%2C%20Estado%20de%20M%C3%A9xico"
+            target="_blank" rel="noopener">
+            Plaza Virreinal No. 100, Col. Barrio San Martín, C.P. 54600, Tepotzotlán, Estado de México.
+          </a>
+        </p> 
+
+        <!-- Mini mapa - Ceremonia -->
+        <div class="details__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3755.9742573774!2d-99.2218262!3d19.7137201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d22027e94c317f%3A0x26423cf7f42c9edc!2sParroquia%20de%20San%20Pedro%20Ap%C3%B3stol%20de%20Tepotzotl%C3%A1n!5e0!3m2!1ses-419!2smx!4v1772071742129!5m2!1ses-419!2smx"
+            width="600" height="450" style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="details__ornament" aria-hidden="true"></div>
+
+      <div class="details__block">
+        <div class="details__icon" aria-hidden="true">
+          <img src="assets/Recepcion_Bienvenida.png" alt="" />
+        </div>
+        <h3 class="details__title script">Recepción</h3>
+        <p class="details__line"><strong>Finca Santa Isabel</strong></p>
+        <p class="details__line"> ·Hora de inicio: 5:30 PM</p>
+        <p class="details__line">
+          <a class="details__addressLink"
+            href="https://www.google.com/maps/search/?api=1&query=Finca%20Santa%20Isabel%2C%20Paseo%20de%20las%20Bugambilias%20S%2FN%2C%20C.P.%2054600%2C%20San%20Mateo%20Xoloc%2C%20Estado%20de%20M%C3%A9xico"
+            target="_blank" rel="noopener">
+            Paseo de las Bugambilias S/N, C.P. 54600, San Mateo Xoloc, Estado de México
+          </a>
+        </p>
+
+        <!-- Mini mapa - Recepción -->
+        <div class="details__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.2542928137773!2d-99.24488769999999!3d19.7017949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d21f6f48b77703%3A0x4ef5a5d467664f2d!2sFinca%20Santa%20Isabel!5e0!3m2!1ses-419!2smx!4v1772071812825!5m2!1ses-419!2smx"
+            width="600" height="450" style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <p class="details__line details__note">Estacionamiento disponible en el salón con costo.</p>
+      </div>
+
+      <div class="details__ornament" aria-hidden="true"></div>
+
+      <div class="details__block">
+        <div class="details__icon" aria-hidden="true">
+          <img src="assets/Codigo_Vestimenta_Bienvenida.png" alt="" />
+        </div>
+        <h3 class="details__title script">Código de Vestimenta</h3>
+        <p class="details__line">Vestimenta Formal Cómoda - excepto blanco, marfil, crema, beige y derivados, son exclusivos para la Novia</p>
+      </div>
+
+      <div class="details__ornament" aria-hidden="true"></div>
+
+      <div class="details__block">
+        <div class="details__icon" aria-hidden="true">
+          <img src="assets/Menu_Comida_Bienvenida.png" alt="" />
+        </div>
+        <h3 class="details__title script">Menú</h3>
+        <p class="details__line">El evento contará con menú ligero a 3 tiempos.</p>
+          <p class="details__line"><a class="details__menuLink" href="menu.html">Puedes consultarlo aquí.</a></p>
+      </div>
+
+    </div>
+    <div class="divider"></div>
+    <div aria-hidden="true"
+     style="width:260px;height:360px;margin:-100px auto -110px;background-image:var(--flower-img);background-repeat:no-repeat;background-position:center;background-size:contain;opacity:.95;pointer-events:none;">
+    </div>
+    <!-- <div class="divider"></div> -->
+  </section>
+
+
+<!-- BIG PHOTO -->
+  <section class="full-photo">
+    <img src="assets/hero-2.jpeg" alt="Foto grande" style="--focus-y:48%;" onerror="this.onerror=null;this.src='assets/hero-2.jpg';" />
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp" id="rsvp">
+    <div class="rsvp__inner">
+      <div class="leaf leaf--left" aria-hidden="true"></div>
+      <div class="flower" aria-hidden="true"></div>
+
+      <h2 class="script-title script-title--center">Confirma Tu Asistencia</h2>
+      <p class="rsvp__subtitle">
+        Por favor confirma tu asistencia aquí.
+      </p>
+
+      <div id="alreadyRespondedMsg" class="after-send__msg" style="display:none; margin-top: 14px;">
+        Esta invitación ya ha sido respondida.
+      </div>
+
+      <form class="form" id="rsvpForm">
+        <div class="form__grid">
+          <label class="field">
+            <span>Nombre completo</span>
+            <input type="text" id="name" name="name" placeholder="Ej. Sergio Omar" required>
+          </label>
+
+          <label class="field">
+            <span>Confirmo mi asistencia</span>
+            <select id="assist" name="assist" required>
+              <option value="" selected disabled>Selecciona…</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+              <option value="Tal vez">Tal vez</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>¿Cuántos asistirán (incluyéndote)?</span>
+            <select id="guests" name="guests" required>
+              <option value="" selected disabled>Selecciona…</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </label>
+
+
+          <!-- Nota SOLO cuando exista la opción de niños (se muestra/oculta con JS) -->
+          <div class="field field--full" id="kidsPolicyNote" style="display:none;">
+            <div class="details__note">
+              Nuestro evento está pensado principalmente para adultos. 
+              Sin embargo, para nosotros lo más significativo es que nos acompañen y por ello si necesitan incluir a los pequeños, 
+              pueden solicitarlo y lo confirmaremos según logística y capacidad. 🤍
+            </div>
+        </div>
+        </div>
+
+        <div class="form__actions" id="formActions">
+          <button type="submit" class="btn-primary" id="btnSubmit">Enviar Confirmación</button>
+        </div>
+
+        <!-- Sección que aparece SOLO después de enviar (WhatsApp felicitaciones) -->
+        <div class="after-send" id="afterSend" style="display:none;">
+          <div class="after-send__msg">
+            ¡Gracias! Tu confirmación quedó registrada.
+          </div>
+
+          <label class="field field--full">
+            <span>¿Quisieras dejar una felicitación?</span>
+            <textarea id="congratsMessage" rows="3" placeholder="Escribe aquí tu mensaje (opcional)"></textarea>
+          </label>
+
+          <div class="form__actions">
+            <button type="button" class="btn-primary" id="btnWhats">Enviar felicitaciones</button>
+          </div>
+        </div>
+
+        <div class="form__foot">
+          <div class="contact">
+            <span>¿Alguna alergia o restricción alimentaría?</span> <span>Escríbenos por whatsapp.</span>
+          </div>
+          
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- BIG PHOTO -->
+  <section class="full-photo" style="margin-top:-20px;">
+    <img src="assets/hero-3.jpeg" alt="Foto grande" style="--focus-y:52%;" onerror="this.onerror=null;this.src='assets/hero-3.jpg';" />
+  </section>
+
+  <!-- GIFTS -->
+  <section class="gifts" id="gifts">
+    <div class="divider"></div>
+
+    <div class="gifts__inner">
+      <div class="leaf leaf--left" aria-hidden="true" style="margin-left: -10%;"></div>
+
+      <div class="gifts__grid">
+        <div class="gifts__text">
+          <h2 class="script-title">Mesa de Regalos</h2>
+          <p class="gifts__p"> Tu presencia es el mejor regalo.</p>
+          <p class="gifts__p">Si deseas hacernos un obsequio, hemos preparado una mesa de regalos.</p>
+
+          <div class="gifts__icon" aria-hidden="true">
+            <img src="assets/Regalos.png" alt="" loading="lazy" />
+          </div>
+
+          <div class="gifts__ornament" aria-hidden="true"></div>
+
+          <div class="gift-buttons">
+            <a class="btn-dark" href="https://www.amazon.com.mx" target="_blank" rel="noopener">AMAZON</a>
+            <a class="btn-dark" href="https://mesaderegalos.liverpool.com.mx" target="_blank" rel="noopener">LIVERPOOL</a>
+          </div>
+
+          <div class="gifts__note">Número de evento en liverpool: <strong>11001100</strong></div>
+        </div>
+
+        <figure class="photo photo--large">
+          <img src="assets/gifts-1.jpeg" alt="Foto mesa de regalos" onerror="this.onerror=null;this.src='assets/gifts-1.jpg';" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+<!-- ALERT MODAL (mensaje) -->
+<div class="modal" id="alertModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mensaje">
+  <div class="modal__overlay" id="alertOverlay"></div>
+
+  <div class="modal__panel" role="document">
+    <button class="modal__close" id="alertClose" type="button" aria-label="Cerrar">✕</button>
+
+    <div class="modal__title" id="alertTitle">Mensaje</div>
+
+    <div class="page-subtitle page-subtitle--sm" id="alertMsg" style="margin: 10px 0 14px; text-align:center;">
+      <!-- mensaje aquí -->
+    </div>
+
+    <div class="modal__footer">
+      <button class="btn-primary" id="alertOk" type="button">OK</button>
+    </div>
+  </div>
+</div>
+
+  
+  <script src="rsvp-nombres-addon.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
