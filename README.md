@@ -130,5 +130,3 @@ https://www.linkedin.com/in/ulises13/
 ## License
 This project is intended for educational purposes.
 
-
-This project is intended for educational and portfolio purposes.
